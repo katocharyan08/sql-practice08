@@ -7,6 +7,20 @@ FROM customers;
 
 SELECT
 	country,
-	SUM(score)
+	SUM(score) AS total_score
+FROM customers
+GROUP BY country;
+
+-- Count
+
+SELECT country ,COUNT(*)
+FROM customers
+GROUP BY country;
+
+-- Find the total score and total number of customer for each country
+SELECT 
+country,
+SUM(score) AS total_score,
+COUNT(id) AS total_customers
 FROM customers
 GROUP BY country;
