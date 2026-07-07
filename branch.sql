@@ -7,3 +7,5 @@ CREATE TABLE branch (
     mgr_start_date DATE,
     FOREIGN KEY(mgr_id) REFERENCES employee(emp_id) ON DELETE SET NULL
 );
+
+INSERT INTO branch VALUES(4,'Buffalo',NULL,NULL);
